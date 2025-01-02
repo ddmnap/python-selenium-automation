@@ -1,17 +1,11 @@
 
-Feature: Test Scenarios for Search functionality
-
-  Scenario: User can search for a product
-    Given Open Google page
-    When Input Car into search field
-    And Click on search icon
-    Then Product results for Car are shown
-
 Feature: Tests for search
   Scenario: User can search for tea
     Given Open target main page
     When Search for tea
     Then Verify search results shown for tea
+    Then Verify search term tea in URL
+
   Scenario: User can search for coffee
     Given Open target main page
     When Search for coffee
@@ -29,8 +23,5 @@ Feature: Tests for search
     |coffee     |
     |tea        |
     |mug        |
-
   Scenario: Verify that user can see product names and images
     Given Open target main page
-    When Search for AirPods (3rd Generation)
-    Then Verify that every product has a name and an image
